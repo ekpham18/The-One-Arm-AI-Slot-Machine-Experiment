@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hyper-Scale Token Burner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <header>
+            <h1>AI HYPER-SCALE TOKEN BURNER</h1>
+            <p class="subtitle">MODEL v0.0.1-beta (UNSTABLE) - STATUS: ACTIVE</p>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat-box">
+                <span class="label">AVAILABLE TOKENS:</span>
+                <span id="token-count" class="value">100</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">COST PER TRAINING RUN:</span>
+                <span class="value">10</span>
+            </div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel-1">
+                    <div class="symbol-container">🧠</div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="symbol-container">🤖</div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="symbol-container">💎</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="spin-button" class="btn-primary">START TRAINING (SPIN)</button>
+            <button id="reset-button" class="btn-secondary">REBOOT MODEL (RESET)</button>
+        </div>
+
+        <div class="log-panel">
+            <div class="log-header">INTERNAL LOGS:</div>
+            <div id="status-log" class="log-content">
+                <p>> System initialized.</p>
+                <p>> Waiting for user input to begin training...</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

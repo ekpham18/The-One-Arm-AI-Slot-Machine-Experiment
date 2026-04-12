@@ -1,0 +1,229 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --accent-blue: #58a6ff;
+    --accent-green: #3fb950;
+    --accent-red: #f85149;
+    --text-main: #c9d1d9;
+    --text-dim: #8b949e;
+    --neon-blue: 0 0 10px rgba(88, 166, 255, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--accent-blue);
+    text-shadow: var(--neon-blue);
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.budget-section {
+    display: flex;
+    justify-content: center;
+}
+
+.budget-card {
+    background: var(--card-bg);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-green);
+    margin: 0 5px;
+}
+
+.unit {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.reels-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background: #010409;
+    padding: 15px;
+    border-radius: 12px;
+    border: 4px solid #30363d;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+}
+
+.reel {
+    width: 100px;
+    background: #161b22;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reel-strip {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease-out;
+}
+
+.symbol {
+    height: 150px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.win-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.primary-btn {
+    background: var(--accent-blue);
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+    font-family: inherit;
+    width: 100%;
+}
+
+.primary-btn:active {
+    transform: scale(0.98);
+}
+
+.primary-btn:disabled {
+    background: #30363d;
+    cursor: not-allowed;
+    color: var(--text-dim);
+}
+
+.secondary-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid #30363d;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.8rem;
+}
+
+.secondary-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-dim);
+}
+
+.console {
+    background: #010409;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-header {
+    background: #161b22;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    border-bottom: 1px solid #30363d;
+    color: var(--text-dim);
+}
+
+.console-body {
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.message {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.system { color: var(--text-dim); }
+.win { color: var(--accent-green); font-weight: bold; }
+.loss { color: var(--accent-red); }
+.hidden { display: none; }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.spinning .reel-strip {
+    animation: scrollReel 0.1s linear infinite;
+}
+
+@keyframes scrollReel {
+    from { transform: translateY(0); }
+    to { transform: translateY(-150px); }
+}

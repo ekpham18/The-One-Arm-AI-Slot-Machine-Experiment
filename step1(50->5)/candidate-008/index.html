@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great AI Hallucination Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>The Great AI Hallucination Machine</h1>
+            <p>Spending compute tokens to generate... something?</p>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="label">Compute Tokens:</span>
+                <span id="token-count" class="value">1000</span>
+            </div>
+            <div id="status-message" class="message">Ready to hallucinate?</div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel-1">🤖</div>
+                <div class="reel" id="reel-2">🤖</div>
+                <div class="reel" id="reel-3">🤖</div>
+            </div>
+            <button id="spin-button">HALLUCINATE NOW (-50 Tokens)</button>
+        </div>
+
+        <div class="log-container">
+            <h3>System Logs</h3>
+            <div id="logs">
+                <div class="log-entry">Initializing weights... done.</div>
+                <div class="log-entry">Aligning with "Human Values"... loading...</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

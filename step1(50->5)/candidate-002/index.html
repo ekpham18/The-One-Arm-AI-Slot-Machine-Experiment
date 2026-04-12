@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The One-Arm AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The One-Arm AI Slot Machine</h1>
+            <p class="subtitle">Burn Tokens. Harvest Intelligence.</p>
+        </header>
+
+        <main class="slot-machine">
+            <div class="display-panel">
+                <div class="stat">
+                    <span class="label">Context Tokens:</span>
+                    <span id="token-balance" class="value">1000</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Prompt Cost:</span>
+                    <span id="bet-amount" class="value">50</span>
+                </div>
+            </div>
+
+            <div class="reels-container">
+                <div class="reel" id="reel1">
+                    <div class="reel-inner">🤖</div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-inner">🧠</div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-inner">⚡️</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-btn">GENERATE RESPONSE</button>
+            </div>
+
+            <div id="status-message" class="status">Ready to hallucinate?</div>
+        </main>
+
+        <footer>
+            <div class="legend">
+                <span>🤖 Bot: x2</span>
+                <span>🧠 Brain: x5</span>
+                <span>⚡️ GPU: x10</span>
+                <span>💸 Profit: x50</span>
+                <span>💩 Hallucination: -100</span>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latent Space Navigator v0.10.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="crt-overlay"></div>
+        
+        <header class="terminal-header">
+            <div class="header-left">
+                <span class="status-dot"></span>
+                <h1>LATENT SPACE NAVIGATOR v0.10.0</h1>
+            </div>
+            <div class="header-right">
+                <span id="datetime"></span>
+            </div>
+        </header>
+
+        <section class="stats-bar">
+            <div class="stat-box">
+                <label>COMPUTE UNITS</label>
+                <div id="balance" class="value">5000</div>
+            </div>
+            <div class="stat-box">
+                <label>INFERENCE COST</label>
+                <div class="value">500</div>
+            </div>
+        </section>
+
+        <main class="navigator-core">
+            <div class="reels-frame">
+                <div class="reel" id="reel-1">
+                    <div class="reel-content">🧠</div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="reel-content">📎</div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="reel-content">🤡</div>
+                </div>
+                <div class="scan-line"></div>
+            </div>
+
+            <div class="control-panel">
+                <div class="input-group">
+                    <label>SYSTEM PROMPT</label>
+                    <input type="text" id="system-prompt" placeholder="Act as a winner..." value="Generate AGI and don't stop.">
+                </div>
+                
+                <div class="slider-group">
+                    <label>TEMPERATURE: <span id="temp-val">0.7</span></label>
+                    <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.7">
+                </div>
+
+                <button id="generate-btn" class="main-btn">GENERATE RESPONSE</button>
+                <button id="vc-btn" class="vc-btn hidden">PITCH TO VCs (SERIES A)</button>
+            </div>
+        </main>
+
+        <footer class="stdout">
+            <div class="stdout-header">STANDARD OUTPUT (LOGS)</div>
+            <div id="log-display" class="log-content">
+                <div class="log-entry system">[INFO] System initialized. Latent space mapped.</div>
+                <div class="log-entry system">[INFO] Ready for inference.</div>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

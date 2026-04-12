@@ -1,0 +1,171 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #00FF41;
+    --accent-color: #39FF14;
+    --warn-color: #FF5E00;
+    --error-color: #FF0000;
+    --border-style: 2px solid var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.terminal-container {
+    width: 90%;
+    max-width: 600px;
+    border: var(--border-style);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+header .subtitle {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.stats-panel {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--border-style);
+    padding-bottom: 10px;
+}
+
+.stat-box .label {
+    font-weight: bold;
+}
+
+.stat-box .value {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.reels {
+    display: flex;
+    gap: 15px;
+}
+
+.reel {
+    width: 80px;
+    height: 80px;
+    border: var(--border-style);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.symbol-container {
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: translateY(-100%); filter: blur(5px); }
+    100% { transform: translateY(100%); filter: blur(5px); }
+}
+
+.spinning {
+    animation: spin 0.1s infinite linear;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    background: transparent;
+    border: var(--border-style);
+    color: var(--text-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+button:disabled {
+    border-color: #333;
+    color: #333;
+    cursor: not-allowed;
+}
+
+.log-panel {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    font-size: 0.8rem;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.log-header {
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.log-content {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.log-content p {
+    margin: 2px 0;
+}
+
+/* Glitch effect on labels when low on tokens */
+.low-tokens {
+    animation: flicker 0.5s infinite;
+    color: var(--error-color) !important;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Scrollbar styling */
+.log-content::-webkit-scrollbar {
+    width: 5px;
+}
+.log-content::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+.log-content::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+}

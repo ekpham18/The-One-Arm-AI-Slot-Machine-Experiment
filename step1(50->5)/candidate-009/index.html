@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Alignment Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI ALIGNMENT SLOT MACHINE</h1>
+            <p class="subtitle">Burn compute. Chase AGI. Avoid the p(doom).</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="label">COMPUTE TOKENS</span>
+                <span id="token-count" class="value">1000</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">P(DOOM)</span>
+                <span id="p-doom" class="value">0.1%</span>
+            </div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel1">🤖</div>
+                <div class="reel" id="reel2">🤖</div>
+                <div class="reel" id="reel3">🤖</div>
+            </div>
+            
+            <div class="display-panel">
+                <p id="status-message">Ready for Inference...</p>
+            </div>
+
+            <div class="controls">
+                <button id="spin-button">RUN INFERENCE (50 Tokens)</button>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <div class="terminal-header">Model Logs</div>
+            <div id="logs" class="log-content">
+                > Initializing weights...
+                > Loading training data (scraped without consent)...
+                > System ready.
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The One-Arm AI Slot Machine Experiment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GENERATE <span class="highlight">VALUE</span></h1>
+            <p class="subtitle">Burn tokens. Hallucinate success.</p>
+        </header>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel1">🤖</div>
+                <div class="reel" id="reel2">🤖</div>
+                <div class="reel" id="reel3">🤖</div>
+            </div>
+
+            <div class="controls">
+                <div class="stats">
+                    <div class="stat-box">
+                        <label>Context Window</label>
+                        <div id="token-balance">1000</div>
+                    </div>
+                    <div class="stat-box">
+                        <label>Training Data</label>
+                        <div id="win-count">0</div>
+                    </div>
+                </div>
+
+                <button id="spin-button">INFERENCE (50 tokens)</button>
+            </div>
+        </div>
+
+        <div id="message-display" class="hallucination">Ready to disrupt the industry...</div>
+
+        <div class="paytable">
+            <h3>Reward Weights (Stochastic Parrots Edition)</h3>
+            <ul>
+                <li>🚀 🚀 🚀 : TO THE MOON (+500 tokens)</li>
+                <li>🧠 🧠 🧠 : AGI ACHIEVED (+250 tokens)</li>
+                <li>💰 💰 💰 : VC FUNDING (+100 tokens)</li>
+                <li>🤡 🤡 🤡 : PURE HALLUCINATION (+50 tokens)</li>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
