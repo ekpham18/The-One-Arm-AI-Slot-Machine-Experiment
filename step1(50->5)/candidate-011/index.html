@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Overlord | AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-bg"></div>
+    <main class="app-container">
+        <header class="header">
+            <h1>GPU OVERLORD</h1>
+            <p class="subtitle">Foundational Model Inference Terminal</p>
+        </header>
+
+        <section class="hud">
+            <div class="hud-item" id="credits-container">
+                <span class="label">COMPUTE CREDITS:</span>
+                <span id="credits" class="value">1000</span>
+            </div>
+            <div class="hud-item" id="status-container">
+                <span class="label">STATUS:</span>
+                <span id="status" class="value">READY FOR INFERENCE...</span>
+            </div>
+        </section>
+
+        <section class="slot-machine">
+            <div class="reel-container">
+                <div class="reel" id="reel-1">
+                    <div class="symbol">🤖</div>
+                </div>
+            </div>
+            <div class="reel-container">
+                <div class="reel" id="reel-2">
+                    <div class="symbol">🧠</div>
+                </div>
+            </div>
+            <div class="reel-container">
+                <div class="reel" id="reel-3">
+                    <div class="symbol">🖼️</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls">
+            <button id="spin-btn" class="btn primary">INFERENCE (10 CR)</button>
+            <button id="max-btn" class="btn secondary">OVERFIT (MAX BET)</button>
+            <button id="auto-btn" class="btn secondary">AUTO-GPT (AUTO-SPIN)</button>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 DystopiaAI Inc. - "Your Data is Our Fuel"</p>
+        </footer>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
